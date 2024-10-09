@@ -13,6 +13,7 @@ public class Minigame1 : MonoBehaviour
     [SerializeField] private float time;
     [SerializeField] private GameObject gameOverPanel = null;
     [SerializeField] private TextMeshProUGUI scoreText = null;
+    [SerializeField] private TextMeshProUGUI scoreT = null;
 
     void Start()
     {
@@ -66,12 +67,14 @@ public class Minigame1 : MonoBehaviour
         }
         if (barra.value > 75 % maxBar && barra.value < 95 % maxBar)
         {
-            score += 75f * Time.deltaTime;
+            score += 100f * Time.deltaTime;
         }
         if (barra.value > 95 % maxBar)
         {
-            score += 100f * Time.deltaTime;
+            score += 200f * Time.deltaTime;
         }
+        scoreT.text = "Score: " + score;
+
     }
 
     public void ActionButton()
