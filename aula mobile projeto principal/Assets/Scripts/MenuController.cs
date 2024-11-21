@@ -54,29 +54,9 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    //public void LoadLvl2()
-    //{
-    //    SceneManager.LoadScene(3);
-    //}
-    //public void LoadLvl3()
-    //{
-    //    SceneManager.LoadScene(4);
-    //}
-    //public void LoadLvl4()
-    //{
-    //    SceneManager.LoadScene(5);
-    //}
-    //public void LoadLvl5()
-    //{
-    //    SceneManager.LoadScene(6);
-    //}
-    //public void LoadLvl6()
-    //{
-    //    SceneManager.LoadScene(7);
-    //}
     #endregion
     public void LoadFinalScore()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(2);
     }
 }
