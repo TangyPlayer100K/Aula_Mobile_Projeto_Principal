@@ -51,14 +51,18 @@ public class MenuController : MonoBehaviour
     }
 
     #region Scenes
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
     public void ExitToMenu()
     {
         SceneManager.LoadScene(0);
     }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void GoToEnding()
+    {
+        SceneManager.LoadScene(2);
+    }    
     #endregion
 
     public void ExitGame()
