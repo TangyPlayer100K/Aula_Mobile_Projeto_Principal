@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
     [SerializeField] bool gameIsPaused = false;
+    [SerializeField] bool audioIsMuted = false;
     private void Start()
     {
         if (pausePanel != null)
@@ -17,21 +18,6 @@ public class MenuController : MonoBehaviour
         {
             pausePanel = null;
         }
-    }
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void ExitGame()
-    {
-        Debug.Log("morri!");
-        Application.Quit();
-    }
-
-    public void ExitToMenu()
-    {
-        SceneManager.LoadScene(0);
     }
 
     public void Pause()
@@ -49,14 +35,35 @@ public class MenuController : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-    #region lvls
-    public void LoadLvl1()
+
+    public void AudioSwitch()
     {
-        SceneManager.LoadScene(2);
+        if (audioIsMuted == false)
+        {
+            //desliga o audio
+            audioIsMuted = true;
+        }
+        else if (audioIsMuted == true)
+        {
+            //liga o audio
+            audioIsMuted = false;
+        }
+    }
+
+    #region Scenes
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     #endregion
-    public void LoadFinalScore()
+
+    public void ExitGame()
     {
-        SceneManager.LoadScene(2);
+        Debug.Log("morri!");
+        Application.Quit();
     }
 }
