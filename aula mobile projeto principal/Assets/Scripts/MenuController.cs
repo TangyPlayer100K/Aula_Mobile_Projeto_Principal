@@ -59,10 +59,6 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void GoToEnding()
-    {
-        SceneManager.LoadScene(2);
-    }    
     #endregion
 
     public void ExitGame()
