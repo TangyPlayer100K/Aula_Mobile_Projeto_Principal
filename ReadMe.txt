@@ -1,1 +1,1 @@
-estou mandando o git porque n está me deixando fazer uma build
+estou mandando o git porque n está me deixando fazer um apk
